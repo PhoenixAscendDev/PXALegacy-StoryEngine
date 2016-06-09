@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace JB2.StoryEngine
 {
-    public interface IEmotion : JB2.Common.IIDNamePair<int,string>
+    public interface IEmotion : JB2.Common.IIDNamePair<int, string>
     {
         int ToIntValue();
+        JB2.Common.PADTrait ToPADTrait();
     }
 }
