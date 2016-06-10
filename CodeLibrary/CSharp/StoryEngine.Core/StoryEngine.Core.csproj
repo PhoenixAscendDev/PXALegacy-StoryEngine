@@ -52,10 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigFiveTrait.cs" />
     <Compile Include="ICharacter.cs" />
     <Compile Include="ICharacterAttribute.cs" />
     <Compile Include="IEmotion.cs" />
     <Compile Include="IObject.cs" />
+    <Compile Include="PADTrait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

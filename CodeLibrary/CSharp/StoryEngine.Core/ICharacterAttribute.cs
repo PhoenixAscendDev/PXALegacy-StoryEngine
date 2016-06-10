@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JB2.StoryEngine
 {
-    public interface ICharacterAttribute : ICharacterAttribute<int,Enum.CharacterAttributeType>
+    public interface ICharacterAttribute : ICharacterAttribute<int>
     {
 
     }

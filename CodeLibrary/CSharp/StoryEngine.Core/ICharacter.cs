@@ -13,6 +13,7 @@ namespace JB2.StoryEngine
         where TKind : IComparable
         where TAttribute : ICharacterAttribute<int>
     {
+        IEmotion CurrentEmotion { get; set; }
         IDictionary<TAttributeIndex, TAttribute> BaseAttributes { get; set; }
         IEnumerable<ICharacter<TID, TName, TAttributeIndex, TAttribute, TKind, TTag, TRng>> Children { get; set; }
     }
