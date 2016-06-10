@@ -31,15 +31,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JB2.Common.Color, Version=0.2.0.552, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Color.0.2.0\lib\JB2.Common.Color.dll</HintPath>
+      <HintPath>..\..\..\Solutions\StoryEngine\packages\JB2.Color.0.2.0\lib\JB2.Common.Color.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JB2.Common.Core, Version=0.3.17.23064, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Core.0.3.17\lib\JB2.Common.Core.dll</HintPath>
+      <HintPath>..\..\..\Solutions\StoryEngine\packages\JB2.Common.Core.0.3.17\lib\JB2.Common.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JB2.Common.Ultities, Version=0.2.0.42495, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Utility.0.2.0\lib\JB2.Common.Ultities.dll</HintPath>
+      <HintPath>..\..\..\Solutions\StoryEngine\packages\JB2.Common.Utility.0.2.0\lib\JB2.Common.Ultities.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -52,10 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigFiveTrait.cs" />
+    <Compile Include="CharacterAttributeType.cs" />
+    <Compile Include="IBodyPart.cs" />
     <Compile Include="ICharacter.cs" />
     <Compile Include="ICharacterAttribute.cs" />
     <Compile Include="IEmotion.cs" />
+    <Compile Include="IFace.cs" />
+    <Compile Include="IFoot.cs" />
+    <Compile Include="IHand.cs" />
     <Compile Include="IObject.cs" />
+    <Compile Include="ISpecies.cs" />
+    <Compile Include="PADTrait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
