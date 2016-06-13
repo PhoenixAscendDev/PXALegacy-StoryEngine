@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace JB2.StoryEngine
 {
-    public interface ICharacterAttribute : ICharacterAttribute<int>
+    public interface ICharacterAttribute : ICharacterAttribute<short>
     {
 
     }
-    public interface ICharacterAttribute<TType> : ICharacterAttribute<int,TType>
+    public interface ICharacterAttribute<TType> : ICharacterAttribute<short,TType>
     {
 
     }

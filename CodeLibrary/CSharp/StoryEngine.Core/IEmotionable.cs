@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace JB2.StoryEngine
 {
-    public interface ISpecies : ICharacter<string>
+    public interface IEmotionable 
     {
+        IEmotion GetCurrentEmotion();
+        IEmotion GetPreviousEmotion();
+
+
+        IEnumerable<IEmotion> GetEmotionHistory();
 
     }
-
-    public interface ISpecies<TID> : ICharacter<TID>
-        where TID : IComparable
-    {
-
-    }
-    
 }
