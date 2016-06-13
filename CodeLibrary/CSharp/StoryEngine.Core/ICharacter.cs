@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JB2.StoryEngine
+namespace JB2.Engine.Storybook
 {
 
     public interface ICharacter : ICharacter<string>
@@ -13,12 +13,9 @@ namespace JB2.StoryEngine
     }
 
     public interface ICharacter<TID> : JB2.Common.IPerson<TID>, IEmotionable
-        where TID : IComparable
-                
+        where TID : IComparable            
     {
         IDictionary<string, ICharacterAttribute> BaseAttributes { get; set; }
-        
-
         IEnumerable<IFoot<TID>> Feet { get; set; }
         IEnumerable<IHand<TID>> Hands { get; set; }
         IEnumerable<IHead<TID>> Heads { get; set; }

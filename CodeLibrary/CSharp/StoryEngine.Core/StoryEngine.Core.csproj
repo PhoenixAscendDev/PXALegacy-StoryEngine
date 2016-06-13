@@ -7,8 +7,8 @@
     <ProjectGuid>{FC6DC341-2B82-493B-9650-82DC9874A418}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JB2.StoryEngine</RootNamespace>
-    <AssemblyName>JB2.StoryEngine.Core</AssemblyName>
+    <RootNamespace>JB2.Engine.Storybook</RootNamespace>
+    <AssemblyName>JB2.Engine.Storybook.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -73,6 +73,7 @@
     <Compile Include="IPersonalityTraits.cs" />
     <Compile Include="IRelationship.cs" />
     <Compile Include="ISpecies.cs" />
+    <Compile Include="IStoryAction.cs" />
     <Compile Include="PADTrait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryBelief.cs" />

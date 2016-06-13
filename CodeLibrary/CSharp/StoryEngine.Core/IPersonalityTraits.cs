@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JB2.StoryEngine
+namespace JB2.Engine.Storybook
 {
     public interface IPersonalityTraits
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JB2.StoryEngine
+namespace JB2.Engine.Storybook
 {
     public interface IObject<TKind,TRNG, TID,TTag> : JB2.Common.IObject<TKind,TID,TTag>
         where TID : IComparable

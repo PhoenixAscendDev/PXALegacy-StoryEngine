@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JB2.Common;
 
-namespace JB2.StoryEngine
+namespace JB2.Engine.Storybook
 {
     public abstract class Character : ICharacter<string>
     {
@@ -148,7 +148,7 @@ namespace JB2.StoryEngine
             return (IEnumerable<IBodyPart<string>>)_bodyparts.Values;
         }
 
-        public abstract IEnumerable<StoryEngine.IRelationship<string>> GetRelationships();
+        public abstract IEnumerable<IRelationship<string>> GetRelationships();
        
         public string GetID()
         {
@@ -170,7 +170,9 @@ namespace JB2.StoryEngine
         public abstract IEnumerable<IEmotion> GetEmotionHistory();
 
         public abstract IEnumerable<ICharacter<string>> GetChildren();
-        
+
+       
+       
 
         #endregion Fields
 
