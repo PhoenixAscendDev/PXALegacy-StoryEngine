@@ -16,10 +16,8 @@ namespace JB2.Engine.Storybook
         where TID : IComparable            
     {
         IDictionary<string, ICharacterAttribute> BaseAttributes { get; set; }
-        IEnumerable<IFoot<TID>> Feet { get; set; }
-        IEnumerable<IHand<TID>> Hands { get; set; }
-        IEnumerable<IHead<TID>> Heads { get; set; }
 
+        Body<TID> Body { get; set; }
         IPersonalityTraits PersonalityTrait { get; set; }
 
         IEnumerable<IBodyPart<TID>> GetBodyParts();

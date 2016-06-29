@@ -23,6 +23,32 @@ namespace JB2.Engine.Storybook
         protected string _kind;
         protected string _class;
 
+
+        public virtual Body<string> Body
+        {
+            get
+            {
+                var result = new Body<string>();
+
+                result.Feet = (IEnumerable<IFoot<string>>)_bodyparts[Enum.BodyPartType.Foot];
+                result.Hands = (IEnumerable<IHand<string>>)_bodyparts[Enum.BodyPartType.Hand];
+                result.Heads = (IEnumerable<IHead<string>>)_bodyparts[Enum.BodyPartType.Head];
+
+                return result;
+            }
+            set
+            {
+                if (_bodyparts == null)
+                    _bodyparts = new Dictionary<Enum.BodyPartType, IEnumerable<IBodyPart<string>>>();
+
+                _bodyparts[Enum.BodyPartType.Foot] = value.Feet;
+                _bodyparts[Enum.BodyPartType.Hand] = value.Hands;
+                _bodyparts[Enum.BodyPartType.Head] = value.Heads;
+
+            }
+        }
+
+
         public virtual IDictionary<string, ICharacterAttribute> BaseAttributes
         {
             get
@@ -35,6 +61,8 @@ namespace JB2.Engine.Storybook
                 _attributes = value;
             }
         }
+
+        public virtual Body<string> 
 
         
 

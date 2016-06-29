@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BigFiveTrait.cs" />
+    <Compile Include="Body.cs" />
     <Compile Include="BodyPartType.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="CharacterAttributeType.cs" />
