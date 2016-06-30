@@ -8,7 +8,7 @@ using JB2.Sprog;
 
 namespace JB2.Engine.Storybook
 {
-    public interface IWorld<TID> : JB2.Common.IIDProp<TID>
+    public interface IWorld<TID,TType> : JB2.Common.IIDNamePair<TID,string>
         where TID : IComparable
     {
         IWeather WeatherCondition { get; set; }
@@ -17,6 +17,12 @@ namespace JB2.Engine.Storybook
 
         double Gravity { get; set; }
 
-        IEnumerable<ISpecies<TID>> Species { get; set; }
+        IEnumerable<ISpecies<TID>> GetSpecies();
+
+        IEnumerable<IWorld<TID,TType>> GetChildren();
+
+        TType GetWorldType();
+
+
     }
 }
