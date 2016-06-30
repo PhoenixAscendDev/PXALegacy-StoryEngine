@@ -62,10 +62,6 @@ namespace JB2.Engine.Storybook
             }
         }
 
-        public virtual Body<string> 
-
-        
-
         public virtual IEnumerable<IFoot<string>> Feet
         {
             get

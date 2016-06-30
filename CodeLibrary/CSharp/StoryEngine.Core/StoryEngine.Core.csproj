@@ -46,6 +46,10 @@
       <HintPath>..\..\..\Solutions\packages\JB2.Common.Utility.0.2.0\lib\JB2.Common.Ultities.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="JB2.Sprog.Weather, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Weather.0.1.1\lib\JB2.Sprog.Weather.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -75,6 +79,7 @@
     <Compile Include="IRelationship.cs" />
     <Compile Include="ISpecies.cs" />
     <Compile Include="IStoryAction.cs" />
+    <Compile Include="IWorld.cs" />
     <Compile Include="PADTrait.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryBelief.cs" />
