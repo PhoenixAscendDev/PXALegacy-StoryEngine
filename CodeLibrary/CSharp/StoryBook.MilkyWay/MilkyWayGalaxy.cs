@@ -38,7 +38,7 @@ namespace JB2
             }
         }
 
-        public static Planet GetPlanet(string name)
+        public static Planet GetMilkyWayPlanet(string name)
         {
             Planet result = null;
             foreach(var s in _milkyway.GetChildren())
@@ -52,6 +52,11 @@ namespace JB2
                 }
             }
             return result;
+        }
+
+        public static void AddWorld(IWorld<string, WorldType> world)
+        {
+            _galaxies.Add(world);
         }
     }
 }

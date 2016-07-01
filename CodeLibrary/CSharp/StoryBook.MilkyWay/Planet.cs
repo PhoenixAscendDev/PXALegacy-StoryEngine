@@ -17,8 +17,6 @@ namespace JB2.Storybook.MilkyWay
         private List<ISpecies<string>> _species;
 
         #endregion Fields
-
-
         public Planet()
         {
             _children = new List<IWorld<string, WorldType>>();
@@ -122,6 +120,8 @@ namespace JB2.Storybook.MilkyWay
                 var moon = new Moon();
                 moon.Name = "Moon";
                 moon.Gravity = 1.62;
+
+                p.AddSpecies(new Human());
 
                 p.AddMoon(moon);
 
