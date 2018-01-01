@@ -6,7 +6,7 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface ISolarSystem : IMilkyWayWorld
+    public interface ISolarSystem : IMilkyWayWorld, IEnumerable<IPlanet>
     {
        IEnumerable<IPlanet> Planets { get; set; }   
     }

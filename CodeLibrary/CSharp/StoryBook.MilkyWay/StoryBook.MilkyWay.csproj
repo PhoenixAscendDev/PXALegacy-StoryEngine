@@ -65,6 +65,7 @@
     <Compile Include="Interfaces\IUniverse.cs" />
     <Compile Include="Galaxy.cs" />
     <Compile Include="MilkyWayGalaxy.cs" />
+    <Compile Include="MilkyWayWorld.cs" />
     <Compile Include="Moon.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

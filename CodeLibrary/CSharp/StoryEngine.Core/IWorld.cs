@@ -25,6 +25,8 @@ namespace JB2.Storybook
 
         long DistanceFromParent { get; set; }
 
+        TID ParentID { get; set; }
+
 
     }
 }

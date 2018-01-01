@@ -8,5 +8,6 @@ namespace JB2.Storybook
 { 
     public interface IMilkyWayWorld : IWorld<string,Enum.WorldType>
     {
+
     }
 }

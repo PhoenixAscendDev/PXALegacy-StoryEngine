@@ -49,7 +49,11 @@ namespace JB2.Storybook
             return new IWorld<string, WorldType>[1] { _solarSystems };
         }
 
-       
+        public void AddSolarSystem(ISolarSystem s)
+        {
+            s.ParentID = this.ID;
+            _solarSystems = s;
+        }
 
         public override WorldType GetWorldType()
         {
