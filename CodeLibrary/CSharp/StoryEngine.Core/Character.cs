@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JB2.Common;
 
-namespace JB2.Engine.Storybook
+namespace JB2.Storybook
 {
     public abstract class Character : ICharacter<string>
     {

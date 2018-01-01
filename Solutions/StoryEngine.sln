@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryEngine.Core", "..\CodeLibrary\CSharp\StoryEngine.Core\StoryEngine.Core.csproj", "{FC6DC341-2B82-493B-9650-82DC9874A418}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryBook.MilkyWay", "..\CodeLibrary\CSharp\StoryBook.MilkyWay\StoryBook.MilkyWay.csproj", "{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net3.5", "Net3.5", "{055A211C-2F12-4151-8F4D-0901242E803A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryEngine.Core.Net35", "..\Frameworks\Net35\StoryEngine.Core.Net35\StoryEngine.Core.Net35.csproj", "{A8926062-458F-406E-91BC-2B99F7387549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net 4.5", "Net 4.5", "{D0C9B11C-B922-4629-9D71-C68664D8889A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryBook.MilkyWay", "..\Frameworks\Net35\StoryBook.MilkyWay\StoryBook.MilkyWay.csproj", "{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +29,25 @@ Global
 		{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8926062-458F-406E-91BC-2B99F7387549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8926062-458F-406E-91BC-2B99F7387549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8926062-458F-406E-91BC-2B99F7387549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8926062-458F-406E-91BC-2B99F7387549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC6DC341-2B82-493B-9650-82DC9874A418} = {D0C9B11C-B922-4629-9D71-C68664D8889A}
+		{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D} = {D0C9B11C-B922-4629-9D71-C68664D8889A}
+		{A8926062-458F-406E-91BC-2B99F7387549} = {055A211C-2F12-4151-8F4D-0901242E803A}
+		{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E} = {055A211C-2F12-4151-8F4D-0901242E803A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F873F46-8F9B-4BC7-8554-D94E94513D24}
 	EndGlobalSection
 EndGlobal

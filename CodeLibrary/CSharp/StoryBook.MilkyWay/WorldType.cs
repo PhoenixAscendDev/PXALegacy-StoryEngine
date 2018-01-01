@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace JB2.Storybook.MilkyWay.Enum
+
+namespace JB2.Storybook.Enum
 {
     public enum WorldType
     {
@@ -13,6 +13,6 @@ namespace JB2.Storybook.MilkyWay.Enum
         Planet,
         Moon,
         Star,
-        Unknown
+        Region
     }
 }

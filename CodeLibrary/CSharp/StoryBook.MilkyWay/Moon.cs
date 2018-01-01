@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-using JB2.Engine.Storybook;
-using JB2.Storybook.MilkyWay.Enum;
 
-namespace JB2.Storybook.MilkyWay
+using JB2.Storybook.Enum;
+
+
+namespace JB2.Storybook
 {
-    public class Moon : World<string, Enum.WorldType>
+    public class Moon : World<string, Enum.WorldType>, IMoon
     {
         public override IEnumerable<IWorld<string, WorldType>> GetChildren()
         {

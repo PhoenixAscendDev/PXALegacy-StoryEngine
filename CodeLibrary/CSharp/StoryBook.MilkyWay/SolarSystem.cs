@@ -2,39 +2,50 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-using JB2.Common;
-using JB2.Engine.Storybook;
-using JB2.Storybook.MilkyWay.Enum;
 
-namespace JB2.Storybook.MilkyWay
+
+using JB2.Storybook.Enum;
+
+namespace JB2.Storybook
 {
-    public class SolarSystem : World<string,Enum.WorldType>
+    public class SolarSystem : World<string,Enum.WorldType>, ISolarSystem
     {
-        protected IDictionary<string, Planet> _planets;
+        protected IDictionary<string, IPlanet> _planets;
+
+        public IEnumerable<IPlanet> Planets
+        {
+            get
+            {
+                return _planets.Values;
+            }
+            set
+            {
+                foreach(var v in value)
+                {
+                    if (!_planets.ContainsKey(v.ID))
+                        _planets.Add(v.ID, v);
+                    else
+                        _planets[v.ID] = v;
+                }
+            }
+        }
 
         public SolarSystem()
         {
-            _planets = new Dictionary<string, Planet>();
+            _planets = new Dictionary<string, IPlanet>();
             _id = "MilkyWay-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=solarsystem"));
             _name = "Solar System";
         }
+
+
+
         public override IEnumerable<IWorld<string,Enum.WorldType>> GetChildren()
         {
             return _planets.Values.ToList();
         }
 
-        public override IEnumerable<ISpecies<string>> GetSpecies()
-        {
-            List<ISpecies<string>> result = new List<ISpecies<string>>();
-            foreach(var p in _planets.Values)
-            {
-                result.AddRange(p.GetSpecies());
-            }
-
-            return result;
-        }
+        
 
         public override WorldType GetWorldType()
         {

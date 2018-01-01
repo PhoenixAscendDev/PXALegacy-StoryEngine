@@ -7,8 +7,8 @@
     <ProjectGuid>{1F8284BD-E43B-46CB-B192-AA4A80EC0C8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JB2.Galaxy.MilkyWay</RootNamespace>
-    <AssemblyName>JB2.Galaxy.MilkyWay</AssemblyName>
+    <RootNamespace>JB2.Storybook</RootNamespace>
+    <AssemblyName>JB2.Storybook.MilkyWay</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,11 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JB2.Common.Color, Version=0.2.0.552, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Color.0.2.0\lib\JB2.Common.Color.dll</HintPath>
+    <Reference Include="JB2.Common.Color, Version=0.2.0.26478, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Common.Color.0.2.0.1\lib\net45\JB2.Common.Color.dll</HintPath>
     </Reference>
-    <Reference Include="JB2.Common.Core, Version=0.4.20.2270, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Core.0.4.20.1\lib\net45\JB2.Common.Core.dll</HintPath>
+    <Reference Include="JB2.Common.Core, Version=0.4.20.15147, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Common.Core.0.4.20.2\lib\net45\JB2.Common.Core.dll</HintPath>
     </Reference>
     <Reference Include="JB2.Common.RNG, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Solutions\packages\JB2.RNG.1.2.0\lib\JB2.Common.RNG.dll</HintPath>
@@ -63,12 +63,20 @@
   <ItemGroup>
     <Compile Include="Head.cs" />
     <Compile Include="Human.cs" />
-    <Compile Include="MilkyWay.cs" />
+    <Compile Include="Interfaces\IGalaxy.cs" />
+    <Compile Include="Interfaces\IMoon.cs" />
+    <Compile Include="Interfaces\IPlanet.cs" />
+    <Compile Include="Interfaces\IRegion.cs" />
+    <Compile Include="Interfaces\ISolarSystem.cs" />
+    <Compile Include="Interfaces\IStar.cs" />
+    <Compile Include="Interfaces\IUniverse.cs" />
+    <Compile Include="Galaxy.cs" />
     <Compile Include="MilkyWayGalaxy.cs" />
     <Compile Include="Moon.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SolarSystem.cs" />
+    <Compile Include="Star.cs" />
     <Compile Include="WorldType.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using JB2.Sprog;
 
-namespace JB2.Engine.Storybook
+namespace JB2.Storybook
 {
     public interface IWorld<TID,TType> : JB2.Common.IIDNamePair<TID,string>
         where TID : IComparable
@@ -22,6 +22,8 @@ namespace JB2.Engine.Storybook
         IEnumerable<IWorld<TID,TType>> GetChildren();
 
         TType GetWorldType();
+
+        long DistanceFromParent { get; set; }
 
 
     }

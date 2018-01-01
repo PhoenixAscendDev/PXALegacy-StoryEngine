@@ -7,8 +7,8 @@
     <ProjectGuid>{FC6DC341-2B82-493B-9650-82DC9874A418}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JB2.Engine.Storybook</RootNamespace>
-    <AssemblyName>JB2.Engine.Storybook.Core</AssemblyName>
+    <RootNamespace>JB2.Storybook</RootNamespace>
+    <AssemblyName>JB2.Storybook.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,25 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JB2.Common.Color, Version=0.2.0.552, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Color.0.2.0\lib\JB2.Common.Color.dll</HintPath>
+    <Reference Include="JB2.Common.Color, Version=0.2.0.26478, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Common.Color.0.2.0.1\lib\net45\JB2.Common.Color.dll</HintPath>
     </Reference>
-    <Reference Include="JB2.Common.Core, Version=0.4.14.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Core.0.4.14.3\lib\net45\JB2.Common.Core.dll</HintPath>
+    <Reference Include="JB2.Common.Core, Version=0.4.20.15147, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Common.Core.0.4.20.2\lib\net45\JB2.Common.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JB2.Common.RNG, Version=0.1.3.20860, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.RNG.0.1.3.0\lib\JB2.Common.RNG.dll</HintPath>
+    <Reference Include="JB2.Common.Map, Version=0.2.8.39737, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Common.Map.0.2.8\lib\net45\JB2.Common.Map.dll</HintPath>
     </Reference>
-    <Reference Include="JB2.Common.Ultities, Version=0.2.0.42495, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Common.Utility.0.2.0\lib\JB2.Common.Ultities.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="JB2.Sprog.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Core.0.4.0\lib\net45\JB2.Sprog.Core.dll</HintPath>
     </Reference>
-    <Reference Include="JB2.Sprog.Core, Version=0.3.2.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Core.0.3.2.1\lib\JB2.Sprog.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="JB2.Sprog.Weather, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Weather.0.1.1\lib\JB2.Sprog.Weather.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="JB2.Sprog.Weather, Version=0.4.0.4435, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Weather.0.4.0\lib\net45\JB2.Sprog.Weather.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

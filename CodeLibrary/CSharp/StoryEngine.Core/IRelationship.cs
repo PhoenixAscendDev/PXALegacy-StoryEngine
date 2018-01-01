@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using JB2.Common;
 
-namespace JB2.Engine.Storybook
+namespace JB2.Storybook
 {
     public interface IRelationship<TID>: JB2.Common.IUpdateable, JB2.Common.IIDProp<TID>, IEmotionable
     {

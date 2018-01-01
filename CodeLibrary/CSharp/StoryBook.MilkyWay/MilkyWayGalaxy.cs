@@ -2,26 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-using JB2.Engine.Storybook;
-using JB2.Storybook.MilkyWay.Enum;
-using JB2.Storybook.MilkyWay;
 
-namespace JB2
+
+using JB2.Storybook.Enum;
+
+
+
+namespace JB2.Storybook
 {
 
-    public static class Universe
+    public class Universe
     {
-        private static MilkyWay _milkyway;
+        private static Galaxy _milkyway;
         private static List<IWorld<string, WorldType>> _galaxies = new List<IWorld<string, WorldType>>();
-        public static MilkyWay MilkyWay
+        public static Galaxy MilkyWay
         {
             get
             {
                 if(_milkyway == null)
                 {
-                    _milkyway = new MilkyWay();
+                    _milkyway = new Galaxy("MilkyWay-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milyway"))
+                                            ,"MilkyWay");
                     var s = new SolarSystem();
                     s.AddPlanet(Planet.Earth);
                     s.AddPlanet(Planet.Jupitor);
@@ -33,6 +35,11 @@ namespace JB2
                     s.AddPlanet(Planet.Uranus);
                     s.AddPlanet(Planet.Venus);
                     _milkyway.AddSolarSystem(s);
+
+                    var sun = new Star("Sun-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milyway"))
+                                        ,"Sun");
+
+                    sun.SolarSystem = s;
                 }
                 return _milkyway;
             }

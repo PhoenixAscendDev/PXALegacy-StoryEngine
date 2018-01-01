@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JB2.Engine.Storybook.Enum
+namespace JB2.Storybook.Enum
 {
     public enum BodyPartType
     {

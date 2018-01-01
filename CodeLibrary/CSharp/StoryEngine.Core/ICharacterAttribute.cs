@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JB2.Engine.Storybook
+namespace JB2.Storybook
 {
     public interface ICharacterAttribute : ICharacterAttribute<short>
     {

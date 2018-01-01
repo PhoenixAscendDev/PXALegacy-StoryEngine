@@ -2,24 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-using JB2.Engine.Storybook;
-using JB2.Storybook.MilkyWay.Enum;
 
-namespace JB2.Storybook.MilkyWay
+
+using JB2.Storybook.Enum;
+
+namespace JB2.Storybook
 {
-    public class MilkyWay : World<string,Enum.WorldType>
+    public class Galaxy : World<string,Enum.WorldType>
     {
         #region Fields
         protected List<SolarSystem> _solarSystems;
         #endregion Fields
 
-        public MilkyWay()
+        public Galaxy()
         {
-            _id = "MilkyWay-" + JB2.Common.NewID.UriHash( new Uri("http://universe.jbsquared.com/unverse=milyway"));
-            _name = "MilkyWay";
+            
             _solarSystems = new List<SolarSystem>();
+        }
+
+        public Galaxy(string id, string name) : this()
+        {
+            _id = id;
+            _name = name;
         }
 
 

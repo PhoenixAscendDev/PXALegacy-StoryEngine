@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace JB2.Storybook.MilkyWay
+
+namespace JB2.Storybook
 {
-    public class Head : JB2.Common.IDNamePair<string,string>,JB2.Engine.Storybook.IHead<string>
+    public class Head : JB2.Common.IDNamePair<string,string>,JB2.Storybook.IHead<string>
     {
     }
 
-    public class Hand : JB2.Common.IDNamePair<string, string>, JB2.Engine.Storybook.IHand<string>
+    public class Hand : JB2.Common.IDNamePair<string, string>, JB2.Storybook.IHand<string>
     {
         public Hand(int fingers) : base()
         {
@@ -23,7 +23,7 @@ namespace JB2.Storybook.MilkyWay
         }
     }
 
-    public class Foot : JB2.Common.IDNamePair<string, string>, JB2.Engine.Storybook.IFoot<string>
+    public class Foot : JB2.Common.IDNamePair<string, string>, JB2.Storybook.IFoot<string>
     {
         public Foot(int fingers) : base()
         {
