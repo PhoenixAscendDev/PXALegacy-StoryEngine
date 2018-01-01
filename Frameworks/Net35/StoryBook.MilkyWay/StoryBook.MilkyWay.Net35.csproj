@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8926062-458F-406E-91BC-2B99F7387549}</ProjectGuid>
+    <ProjectGuid>{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JB2.Storybook</RootNamespace>
-    <AssemblyName>JB2.Storybook.Core</AssemblyName>
+    <RootNamespace>JB2.StoryBook.MilkyWay</RootNamespace>
+    <AssemblyName>JB2.StoryBook.MilkyWay</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -40,6 +40,9 @@
     <Reference Include="JB2.Common.Map, Version=0.2.8.39739, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Solutions\packages\JB2.Common.Map.0.2.8\lib\net35\JB2.Common.Map.dll</HintPath>
     </Reference>
+    <Reference Include="JB2.Sprog.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Core.0.4.0\lib\net35\JB2.Sprog.Core.dll</HintPath>
+    </Reference>
     <Reference Include="JB2.Sprog.Weather, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Solutions\packages\JB2.Sprog.Weather.0.4.0\lib\net35\JB2.Sprog.Weather.dll</HintPath>
     </Reference>
@@ -53,30 +56,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigFiveTrait.cs" />
-    <Compile Include="Body.cs" />
-    <Compile Include="BodyPartType.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="CharacterAttributeType.cs" />
-    <Compile Include="CharacterGoal.cs" />
-    <Compile Include="IBodyPart.cs" />
-    <Compile Include="ICharacter.cs" />
-    <Compile Include="ICharacterAttribute.cs" />
-    <Compile Include="IEmotion.cs" />
-    <Compile Include="IEmotionable.cs" />
-    <Compile Include="IFace.cs" />
-    <Compile Include="IFoot.cs" />
-    <Compile Include="IHand.cs" />
-    <Compile Include="IObject.cs" />
-    <Compile Include="IPersonalityTraits.cs" />
-    <Compile Include="IRelationship.cs" />
-    <Compile Include="ISpecies.cs" />
-    <Compile Include="IStoryAction.cs" />
-    <Compile Include="IWorld.cs" />
-    <Compile Include="PADTrait.cs" />
+    <Compile Include="Galaxy.cs" />
+    <Compile Include="Head.cs" />
+    <Compile Include="Human.cs" />
+    <Compile Include="Interfaces\IGalaxy.cs" />
+    <Compile Include="Interfaces\IMoon.cs" />
+    <Compile Include="Interfaces\IPlanet.cs" />
+    <Compile Include="Interfaces\IRegion.cs" />
+    <Compile Include="Interfaces\ISolarSystem.cs" />
+    <Compile Include="Interfaces\IStar.cs" />
+    <Compile Include="Interfaces\IUniverse.cs" />
+    <Compile Include="MilkyWayGalaxy.cs" />
+    <Compile Include="Moon.cs" />
+    <Compile Include="Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoryBelief.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="SolarSystem.cs" />
+    <Compile Include="Star.cs" />
+    <Compile Include="WorldType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoryEngine.Core.Net35\StoryEngine.Core.Net35.csproj">
+      <Project>{a8926062-458f-406e-91bc-2b99f7387549}</Project>
+      <Name>StoryEngine.Core.Net35</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

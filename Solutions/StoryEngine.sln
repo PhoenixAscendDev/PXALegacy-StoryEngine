@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryEngine.Core.Net35", ".
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Net 4.5", "Net 4.5", "{D0C9B11C-B922-4629-9D71-C68664D8889A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryBook.MilkyWay", "..\Frameworks\Net35\StoryBook.MilkyWay\StoryBook.MilkyWay.csproj", "{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryBook.MilkyWay.Net35", "..\Frameworks\Net35\StoryBook.MilkyWay\StoryBook.MilkyWay.Net35.csproj", "{9D3EAACE-FCD4-46B9-8E13-B9D3D835400E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

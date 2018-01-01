@@ -6,7 +6,7 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface IUniverse : IWorld<string, Enum.WorldType>
+    public interface IUniverse : IMilkyWayWorld
     {
         IEnumerable<IGalaxy> Galaxies { get; set; }
     }

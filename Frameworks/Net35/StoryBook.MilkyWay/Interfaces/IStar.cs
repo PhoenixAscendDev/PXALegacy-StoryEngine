@@ -6,7 +6,7 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface IStar : IMilkyWayWorld
+    public interface IStar : IWorld<string, Enum.WorldType>
     {
         ISolarSystem SolarSystem { get; set; }
     }

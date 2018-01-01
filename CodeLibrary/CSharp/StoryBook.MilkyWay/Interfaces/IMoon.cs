@@ -6,7 +6,8 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface IMoon : IWorld<string, Enum.WorldType>
+    public interface IMoon : IMilkyWayWorld
     {
+
     }
 }
