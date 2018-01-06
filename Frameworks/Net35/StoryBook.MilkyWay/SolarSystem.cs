@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,11 +32,17 @@ namespace JB2.Storybook
             }
         }
 
-        public SolarSystem()
+        public SolarSystem() : base(string.Empty,string.Empty)
         {
+            
+            
+        }
+        public SolarSystem(string id, string name)
+        {
+            _id = id;
+            _name = name;
             _planets = new Dictionary<string, IPlanet>();
-            _id = "MilkyWay-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=solarsystem"));
-            _name = "Solar System";
+            
         }
 
 
@@ -54,8 +61,19 @@ namespace JB2.Storybook
 
         public void AddPlanet(Planet p)
         {
+            p.ParentID = this.ID;
             if (!_planets.ContainsKey(p.GetName()))
                 _planets.Add(p.GetName(), p);
+        }
+
+        public IEnumerator<IPlanet> GetEnumerator()
+        {
+            return _planets.Values.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _planets.Values.GetEnumerator();
         }
     }
 }

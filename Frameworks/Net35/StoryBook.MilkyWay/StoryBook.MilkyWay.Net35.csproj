@@ -60,6 +60,7 @@
     <Compile Include="Head.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Interfaces\IGalaxy.cs" />
+    <Compile Include="Interfaces\IMilkyWayWorld.cs" />
     <Compile Include="Interfaces\IMoon.cs" />
     <Compile Include="Interfaces\IPlanet.cs" />
     <Compile Include="Interfaces\IRegion.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Interfaces\IStar.cs" />
     <Compile Include="Interfaces\IUniverse.cs" />
     <Compile Include="MilkyWayGalaxy.cs" />
+    <Compile Include="MilkyWayWorld.cs" />
     <Compile Include="Moon.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

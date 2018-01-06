@@ -6,7 +6,7 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface IRegion : IWorld<string, Enum.WorldType>
+    public interface IRegion : IMilkyWayWorld
     {
         
     }

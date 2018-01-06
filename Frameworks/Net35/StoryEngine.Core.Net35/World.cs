@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 
-
 namespace JB2.Storybook
 {
     public abstract class World<TID, Ttype> : JB2.Common.IDNamePair<TID, string>, JB2.Storybook.IWorld<TID, Ttype>
@@ -16,6 +15,7 @@ namespace JB2.Storybook
         protected JB2.Sprog.IWeather _weather;
         protected List<ISpecies<TID>> _species;
         protected long _distance;
+        protected TID _parentID;
         #endregion Fields
 
         #region Constructors
@@ -54,6 +54,18 @@ namespace JB2.Storybook
             set
             {
                 _minutesInDay = value;
+            }
+        }
+
+        public TID ParentID
+        {
+            get
+            {
+                return _parentID;
+            }
+            set
+            {
+                _parentID = value;
             }
         }
 

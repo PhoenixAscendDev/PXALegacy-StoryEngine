@@ -5,9 +5,9 @@ using System.Text;
 
 
 namespace JB2.Storybook
-{
-    public interface IStar : IMilkyWayWorld
+{ 
+    public interface IMilkyWayWorld : IWorld<string,Enum.WorldType>
     {
-        ISolarSystem SolarSystem { get; set; }
+
     }
 }

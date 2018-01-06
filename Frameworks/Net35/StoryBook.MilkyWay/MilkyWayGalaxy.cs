@@ -22,9 +22,14 @@ namespace JB2.Storybook
             {
                 if(_milkyway == null)
                 {
-                    _milkyway = new Galaxy("MilkyWay-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milyway"))
+                    _milkyway = new Galaxy("MilkyWay-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milkyway"))
                                             ,"MilkyWay");
-                    var s = new SolarSystem();
+
+                    var sun = new Star("Sun-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milkyway"))
+                                       , "Sun");
+
+                    var s = new SolarSystem("SolarSystem-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=solarsystem")),
+                                           "Solar System");
                     s.AddPlanet(Planet.Earth);
                     s.AddPlanet(Planet.Jupitor);
                     s.AddPlanet(Planet.Mars);
@@ -34,12 +39,10 @@ namespace JB2.Storybook
                     s.AddPlanet(Planet.Saturn);
                     s.AddPlanet(Planet.Uranus);
                     s.AddPlanet(Planet.Venus);
-                    _milkyway.AddSolarSystem(s);
 
-                    var sun = new Star("Sun-" + JB2.Common.NewID.UriHash(new Uri("http://universe.jbsquared.com/unverse=milyway"))
-                                        ,"Sun");
-
-                    sun.SolarSystem = s;
+                    sun.AddSolarSystem(s);
+                    
+                    _milkyway.AddStar(sun);
                 }
                 return _milkyway;
             }

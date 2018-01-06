@@ -6,11 +6,15 @@ using System.Text;
 
 namespace JB2.Storybook
 {
-    public interface IGalaxy : IWorld<string, Enum.WorldType>
+    public interface IGalaxy : IMilkyWayWorld
     {
-        IEnumerable<IStar> Stars { get; set; }
-        IEnumerable<ISolarSystem> SolarSystems { get; set; }
-        IEnumerable<IPlanet> Planets { get; set; }
+        IEnumerable<IStar> GetStars();
+        IEnumerable<ISolarSystem> GetSolarSystems();
+        IEnumerable<IPlanet> GetPlanets();
+
+        void AddStar(IStar star);
+
+        void AddSolarSystem(ISolarSystem solarSystem);
 
 
     }

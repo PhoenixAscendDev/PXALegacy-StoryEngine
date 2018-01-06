@@ -9,45 +9,46 @@ using JB2.Storybook.Enum;
 
 namespace JB2.Storybook
 {
-    public class Galaxy : World<string,Enum.WorldType>
+    public class Galaxy : MilkyWayWorld, IGalaxy
     {
         #region Fields
-        protected List<SolarSystem> _solarSystems;
+        //protected List<SolarSystem> _solarSystems;
+        //protected List<IStar> _stars;
         #endregion Fields
 
-        public Galaxy()
+        #region Constructors
+
+        public Galaxy() : this(JB2.Common.NewID.Guid(),string.Empty)
         {
             
-            _solarSystems = new List<SolarSystem>();
+            
+
         }
 
-        public Galaxy(string id, string name) : this()
+        public Galaxy(string id, string name) : base(id,name)
         {
             _id = id;
             _name = name;
+            
         }
 
-
-        public override IEnumerable<IWorld<string, Enum.WorldType>> GetChildren()
-        {
-            return (IEnumerable<IWorld<string, Enum.WorldType>>)_solarSystems;
-        }
+        #endregion Constructors
 
         public override string GetID()
         {
             return _id;
         }
 
-        public override IEnumerable<ISpecies<string>> GetSpecies()
-        {
-            List<ISpecies<string>> result = new List<ISpecies<string>>();
-            foreach (var p in _solarSystems)
-            {
-                result.AddRange(p.GetSpecies());
-            }
+        //public override IEnumerable<ISpecies<string>> GetSpecies()
+        //{
+        //    List<ISpecies<string>> result = new List<ISpecies<string>>();
+        //    foreach (var p in _solarSystems)
+        //    {
+        //        result.AddRange(p.GetSpecies());
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public override WorldType GetWorldType()
         {
@@ -56,7 +57,40 @@ namespace JB2.Storybook
 
         public void AddSolarSystem(SolarSystem s)
         {
-            _solarSystems.Add(s);
+            s.ParentID = this.ID;
+            _children.Add(s);
+            //_solarSystems.Add(s);
         }
+
+        public void AddStar(IStar s)
+        {
+            s.ParentID = this.ID;
+            _children.Add(s);
+            //_stars.Add(s);
+        }
+
+        public void AddSolarSystem(ISolarSystem s)
+        {
+            s.ParentID = this.ID;
+            _children.Add(s);
+            //_stars.Add(s);
+        }
+
+        public IEnumerable<IStar> GetStars()
+        {
+            return (IEnumerable<IStar>)_children.Where(x => x.GetType() is IStar);
+        }
+
+        public IEnumerable<ISolarSystem> GetSolarSystems()
+        {
+            return (IEnumerable<ISolarSystem>)_children.Where(x => x.GetType() is ISolarSystem);
+        }
+
+        public IEnumerable<IPlanet> GetPlanets()
+        {
+            return (IEnumerable<IPlanet>)_children.Where(x => x.GetType() is IPlanet);
+        }
+
+        
     }
 }
